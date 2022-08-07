@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # swagger-BookStore-api-testing
 Sela repo Project for Api Testing 
 BookStoreApi Project tests APIs on BookStore Swagger
@@ -42,3 +43,7 @@ To run Allure Report
 exemple :
 
 ![image](https://user-images.githubusercontent.com/108628136/183494961-fb233df9-ded7-444e-acba-a064dc5df7ef.png)
+=======
+# Swagger
+Sela project API testing - PetStore and BookStore
+>>>>>>> 9a15cb8 (Initial commit)
