@@ -1,6 +1,8 @@
 # swagger-api-testing
 Sela repo Project for Api Testing 
 
+At this repo you will find Api testing Using Pytest and Allure report for PetStore and Bookstore Api - Swagger (Only json)
+
 # Branches 
 
 *  Petshop Branch
