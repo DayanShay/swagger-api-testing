@@ -2,7 +2,7 @@
 Sela repo Project for Api Testing 
 BookStoreApi Project tests APIs on BookStore Swagger
 
-At BookStoreApi Fflder you will find:
+At BookStoreApi folder  you will find:
 
 1.BookStoreTests - contain the pytest sqript testing for the api
 
