@@ -125,10 +125,8 @@ def test_put_books(store_user_fix,bookStoreApi):
     assert code == 200
 
 
-
-# @pytest.mark.Account
-# def test_delete_user(user_fix,accountApi):
-#     res1 = accountApi.delete_user(userId=user_res.userId)
-#     assert res1.status_code == 200
-#     res2 = accountApi.get_user_by_id(userId=user_res.userId)
-#     assert res2.status_code == 401
+def test_delete_user(user_fix,accountApi):
+    res1 = accountApi.delete_user(userId=user_res.userId)
+    assert res1.status_code == 200
+    res2 = accountApi.get_user_by_id(userId=user_res.userId)
+    assert res2.status_code == 401
