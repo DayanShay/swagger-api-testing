@@ -1,6 +1,5 @@
 # swagger-PetStore-api-testing
 Sela repo Project for Api Testing
-
 PetShopApi Project tests APIs on PetStore Swagger
 
 At PetShopApi folder you will find:
