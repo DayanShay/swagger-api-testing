@@ -22,7 +22,7 @@ make sure to copy the full path to the tests file.
 
 ``` pytest "FullPath"\BookStoreApi\BookStoreTests\tests_bookstore.py ```
 
-How to Run on cmd - On your One Swaager.
+How to Run on cmd - On your own Swaager.
 
 "YourURL" = Your local Swager 
 
