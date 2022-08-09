@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # swagger-api-testing
 Sela repo Project for Api Testing 
 
@@ -20,7 +19,4 @@ https://petstore3.swagger.io/
 
 * BookStoreAPI Swagger
 https://bookstore.toolsqa.com/swagger/
-=======
-# Swagger
-Sela project API testing - PetStore and BookStore
->>>>>>> 9a15cb8 (Initial commit)
+
