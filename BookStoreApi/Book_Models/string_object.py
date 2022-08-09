@@ -3,6 +3,7 @@ from BookStoreApi.Book_Models.baseObj import BaseObj
 
 class StringObject(BaseObj):
     def __init__(self, isbn: str, user_id: str):
+        super(BaseObj, self).__init__()
         self._isbn = None
         self._userId = None
 

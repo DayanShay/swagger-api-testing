@@ -4,6 +4,7 @@ from BookStoreApi.Book_Models.collection_of_isbn import CollectionOfIsbn
 
 class AddListOfBooks(BaseObj):
     def __init__(self, userId: str, collectionOfIsbns: list):
+        super(BaseObj, self).__init__()
         self._collectionOfIsbns = None
         if userId is not None:
             if not isinstance(userId, str):

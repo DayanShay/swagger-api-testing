@@ -3,6 +3,7 @@ from BookStoreApi.Book_Models.baseObj import BaseObj
 
 class ReplaceIsbn(BaseObj):
     def __init__(self, userId: str, isbn: str):
+        super(BaseObj, self).__init__()
         self._userId = None
         self._isbn = None
 

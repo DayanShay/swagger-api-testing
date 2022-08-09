@@ -4,6 +4,7 @@ import json
 class BaseObj:
     def __init__(self):
         pass
+
     def to_json(self) -> str:
         result = {}
         for key, val in self.__dict__.items():
@@ -13,7 +14,9 @@ class BaseObj:
                 else:
                     result[key] = val
         return result
+
     def __str__(self):
         return json.dumps(self.to_json())
+
     def __repr__(self):
         return f"{self}"
