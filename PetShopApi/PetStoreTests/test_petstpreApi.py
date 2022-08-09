@@ -124,7 +124,7 @@ def test_upload_image(Pet_fix,pet_Api):
 def order_fix() :
     order = Order(id=1200, petId=12, quantity=7)
     return order
-@pytest.mark.Store
+
 def test_get_inventory(order_fix,store_Api):
     res1 = store_Api.get_inventory()
     LOGGER.info(res1.text)
