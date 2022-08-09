@@ -150,4 +150,3 @@ class BookStoreApi:
         if res1.status_code == 200:
             return res1.status_code, res1.json()
         return res1.status_code, res1.text
-
