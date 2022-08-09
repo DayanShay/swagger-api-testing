@@ -20,7 +20,7 @@ How to Run on cmd - by defalt url of the Swagger. make sure to copy the full pat
 
 ``` pytest "FullPath"\PetShopApi\PetStoreTests\test_petstpreApi.py ```
 
-How to Run on cmd - On your One Swaager. 
+How to Run on cmd - On your Own Swaager. 
 
 "YourURL" = Your local Swager 
 
