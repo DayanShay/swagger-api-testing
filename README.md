@@ -8,7 +8,7 @@ At this repo you will find Api testing Using Pytest and Allure report for PetSto
 *  Petshop Branch
 https://github.com/DayanShay/swagger-api-testing/tree/petshop
 
-*  bookstore Branch
+*  Bookstore Branch
 https://github.com/DayanShay/swagger-api-testing/tree/bookstore
 
 
