@@ -3,7 +3,7 @@ from PetShopApi.Pet_Models.base_obj import BaseObj
 
 class Category(BaseObj):
 
-    def __init__(self, id:int=None, name:str=None):
+    def __init__(self, id: int = None, name: str = None):
         super(BaseObj, self).__init__()
         self._id = id
         self._name = name
@@ -15,4 +15,3 @@ class Category(BaseObj):
             if not isinstance(name, str):
                 raise AttributeError("name must be string")
             self._name = name
-

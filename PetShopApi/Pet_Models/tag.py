@@ -17,7 +17,6 @@ class Tag(BaseObj):
                 raise AttributeError("name must be string")
             self._name = name
 
-
     @property
     def name(self):
         """Gets the name of this tag.
@@ -27,4 +26,4 @@ class Tag(BaseObj):
         return self._name
 
     def __repr__(self):
-        return f"{self}".replace('"',"'")
+        return f"{self}".replace('"', "'")

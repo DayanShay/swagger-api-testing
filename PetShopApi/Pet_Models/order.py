@@ -44,8 +44,8 @@ class Order(BaseObj):
 
     @property
     def id(self):
-        """Gets the id of this Order.  # noqa: E501
-        :return: The id of this Order.  # noqa: E501
+        """Gets the id of this Order.
+        :return: The id of this Order.
         :rtype: int
         """
         return self._id
@@ -53,15 +53,15 @@ class Order(BaseObj):
     @id.setter
     def id(self, Id):
         """Sets the id of this Order.
-        :param Id: The id of this Order.  # noqa: E501
+        :param Id: The id of this Order.
         :type: int
         """
         self._id = Id
 
     @property
     def pet_id(self):
-        """Gets the petId of this Order.  # noqa: E501
-        :return: The petId of this Order.  # noqa: E501
+        """Gets the petId of this Order.
+        :return: The petId of this Order.
         :rtype: int
         """
         return self._petId
@@ -69,15 +69,15 @@ class Order(BaseObj):
     @pet_id.setter
     def pet_id(self, petId):
         """Sets the petId of this Order.
-        :param petId: The petId of this Order.  # noqa: E501
+        :param petId: The petId of this Order.
         :type: int
         """
         self._petId = petId
 
     @property
     def quantity(self):
-        """Gets the quantity of this Order.  # noqa: E501
-        :return: The quantity of this Order.  # noqa: E501
+        """Gets the quantity of this Order.
+        :return: The quantity of this Order.
         :rtype: int
         """
         return self._quantity
@@ -85,7 +85,7 @@ class Order(BaseObj):
     @quantity.setter
     def quantity(self, quantity):
         """Sets the quantity of this Order.
-        :param quantity: The quantity of this Order.  # noqa: E501
+        :param quantity: The quantity of this Order.
         :type: int
         """
         self._quantity = quantity
@@ -105,7 +105,7 @@ class Order(BaseObj):
         :type: datetime
         """
         if shipDate is None:
-            raise ValueError("Invalid value for `shipDate`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `shipDate`, must not be `None`")
         self._shipDate = shipDate
 
     @property

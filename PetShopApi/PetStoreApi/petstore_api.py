@@ -12,19 +12,19 @@ class PetApi:
         self._session = requests.session()
         self._session.headers.update(self._headers)
 
-    def put_pet(self, data: type(json)):
+    def put_pet(self, data: json):
         res = self._session.put(url=f"{self._url}", data=data, headers=self._headers)
         return res
 
-    def post_pet(self, data: type(json)):
+    def post_pet(self, data: json):
         res = self._session.post(url=f"{self._url}", data=data, headers=self._headers)
         return res
 
-    def findByStatus(self, status: type(json)):
+    def findByStatus(self, status: json):
         res = self._session.get(url=f"{self._url}/findByStatus?status={status}", headers=self._headers)
         return res
 
-    def findByTags(self, tags: type(json)):
+    def findByTags(self, tags: json):
         res = self._session.get(url=f"{self._url}/findByTags?tags={tags}", headers=self._headers)
         return res
 
@@ -57,7 +57,7 @@ class StoreApi:
         res = self._session.get(url=f"{self._url}inventory", headers=self._headers)
         return res
 
-    def post_order(self, data: type(json)) -> requests:
+    def post_order(self, data: json) -> requests:
         res = self._session.post(url=f"{self._url}order", json=data, headers=self._headers)
         return res
 
@@ -77,11 +77,11 @@ class UserApi:
         self._session = requests.session()
         self._session.headers.update(self._headers)
 
-    def post_user(self, data: type(json)) -> requests:
+    def post_user(self, data: json) -> requests:
         res = self._session.post(url=f"{self._url}", data=data, headers=self._headers)
         return res
 
-    def post_users_with_list(self, data: type(json)) -> requests:
+    def post_users_with_list(self, data: json) -> requests:
         res = self._session.post(url=f"{self._url}/createWithList", data=data, headers=self._headers)
         return res
 
@@ -97,7 +97,7 @@ class UserApi:
         res = self._session.get(url=f"{self._url}/{username}", headers=self._headers)
         return res
 
-    def put_username(self, username: str, data: type(json)) -> requests:
+    def put_username(self, username: str, data: json) -> requests:
         res = self._session.put(url=f"{self._url}/{username}", data=data, headers=self._headers)
         return res
 
