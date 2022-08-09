@@ -1,4 +1,4 @@
-# swagger-api-testing
+# swagger-BookStore-api-testing
 Sela repo Project for Api Testing 
 BookStoreApi Project tests APIs on BookStore Swagger
 
