@@ -4,6 +4,7 @@ from PetShopApi.Pet_Models.base_obj import BaseObj
 class Category(BaseObj):
 
     def __init__(self, id:int=None, name:str=None):
+        super(BaseObj, self).__init__()
         self._id = id
         self._name = name
         if id is not None and not BaseObj.is_base64(id):
@@ -14,7 +15,4 @@ class Category(BaseObj):
             if not isinstance(name, str):
                 raise AttributeError("name must be string")
             self._name = name
-
-    def __repr__(self):
-        return f"{self}"
 

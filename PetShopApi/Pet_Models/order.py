@@ -2,18 +2,20 @@ from PetShopApi.Pet_Models.base_obj import BaseObj
 import datetime
 from enum import Enum
 
+
 class Status(Enum):
     placed = "placed"
     approved = "approved"
     delivered = "delivered "
 
+
 class Order(BaseObj):
 
-    def __init__(self, id: int, petId: int, quantity=None, shipDate=None, status=None, complete = False):
-
+    def __init__(self, id: int, petId: int, quantity=None, shipDate=None, status=None, complete=False):
+        super(BaseObj, self).__init__()
         if not str(id).isdigit() and not BaseObj.is_base64(id):
             raise TypeError("order id must be a integer!")
-        if not str(petId).isdigit()and not BaseObj.is_base64(id):
+        if not str(petId).isdigit() and not BaseObj.is_base64(id):
             raise TypeError("order pet_id must be a integer!")
 
         self._id = id
@@ -22,7 +24,7 @@ class Order(BaseObj):
         self._shipDate = shipDate
         self._status = status
         self._complete = complete
-        if quantity is not None :
+        if quantity is not None:
             if not str(quantity).isdigit() and not BaseObj.is_base64(id):
                 raise TypeError("order quantity must be a integer!")
             self._quantity = quantity
@@ -90,8 +92,8 @@ class Order(BaseObj):
 
     @property
     def shipDate(self):
-        """Gets the shipDate of this Order.  # noqa: E501
-        :return: The shipDate of this Order.  # noqa: E501
+        """Gets the shipDate of this Order.
+        :return: The shipDate of this Order.
         :rtype: datetime
         """
         return self._shipDate
@@ -99,7 +101,7 @@ class Order(BaseObj):
     @shipDate.setter
     def shipDate(self, shipDate):
         """Sets the shipDate of this Order.
-        :param shipDate: The quantity of this Order.  # noqa: E501
+        :param shipDate: The quantity of this Order.
         :type: datetime
         """
         if shipDate is None:
@@ -108,8 +110,8 @@ class Order(BaseObj):
 
     @property
     def status(self):
-        """Gets the status of this Order.  # noqa: E501
-        :return: The status of this Order.  # noqa: E501
+        """Gets the status of this Order.
+        :return: The status of this Order.
         :rtype: str
         """
         return self._status
@@ -117,17 +119,17 @@ class Order(BaseObj):
     @status.setter
     def status(self, status):
         """Sets the status of this Order.
-        :param status: The quantity of this Order.  # noqa: E501
+        :param status: The quantity of this Order.
         :type: str
         """
         if status is None:
-            raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `status`, must not be `None`")
         self._status = status
 
     @property
     def complete(self):
-        """Gets the complete of this Order.  # noqa: E501
-        :return: The complete of this Order.  # noqa: E501
+        """Gets the complete of this Order.
+        :return: The complete of this Order.
         :rtype: boolean
         """
         return self._complete
@@ -135,19 +137,9 @@ class Order(BaseObj):
     @complete.setter
     def complete(self, complete):
         """Sets the complete of this Order.
-        :param complete: The quantity of this Order.  # noqa: E501
+        :param complete: The quantity of this Order.
         :type: boolean
         """
         if complete is None:
-            raise ValueError("Invalid value for `complete`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `complete`, must not be `None`")
         self._complete = complete
-    def __repr__(self):
-        return f"{self}"
-
-# def main():
-#     o = Order(3242, "23542", 43534, datetime.datetime.now(), "324", False)
-#     print(o.to_json())
-#
-#
-# if __name__ == '__main__':
-#     main()

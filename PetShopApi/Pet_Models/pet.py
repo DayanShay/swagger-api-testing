@@ -4,33 +4,32 @@ from PetShopApi.Pet_Models.tag import Tag
 from PetShopApi.Pet_Models.category import Category
 
 data = {
-  "id": 10,
-  "name": "doggie",
-  "category": {
-    "id": 1,
-    "name": "Dogs"
-  },
-  "photoUrls": [
-    "string"
-  ],
-  "tags": [
-    {
-      "id": 0,
-      "name": "string"
-    }
-  ],
-  "status": "available"
+    "id": 10,
+    "name": "doggie",
+    "category": {
+        "id": 1,
+        "name": "Dogs"
+    },
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 0,
+            "name": "string"
+        }
+    ],
+    "status": "available"
 }
 
 
-
-
-
 class Pet(BaseObj):
-    def __init__(self, id: int, name: str, category= None, photoUrls: list[str, str] = None, tags: Tag = None, status: petStatus = None) -> object:
-        if not isinstance(id,int) and not BaseObj.is_base64(id):
+    def __init__(self, id: int, name: str, category=None, photoUrls: list[str, str] = None, tags: Tag = None,
+                 status: petStatus = None) -> object:
+        super(BaseObj, self).__init__()
+        if not isinstance(id, int) and not BaseObj.is_base64(id):
             raise AttributeError("Id must be id int")
-        if not isinstance(name,str):
+        if not isinstance(name, str):
             raise AttributeError("name must be string")
         self._id = id
         self._name = name
@@ -54,9 +53,9 @@ class Pet(BaseObj):
         if tags is not None:
             if isinstance(tags, list):
                 self._tags = tags
-        if status is not None and isinstance(status,petStatus):
+        if status is not None and isinstance(status, petStatus):
             self._status = status.value
-        if isinstance(status,str):
+        if isinstance(status, str):
             self._status = status
         self._status = status
 
@@ -71,15 +70,15 @@ class Pet(BaseObj):
     @id.setter
     def id(self, id):
         """Sets the id of this Pet.
-        :param id: The id of this Pet.  # noqa: E501
+        :param id: The id of this Pet.
         :type: int
         """
         self._id = id
 
     @property
     def name(self):
-        """Gets the name of this Pet.  # noqa: E501
-        :return: The name of this Pet.  # noqa: E501
+        """Gets the name of this Pet.
+        :return: The name of this Pet.
         :rtype: str
         """
         return self._name
@@ -87,17 +86,17 @@ class Pet(BaseObj):
     @name.setter
     def name(self, name):
         """Sets the name of this Pet.
-        :param name: The name of this Pet.  # noqa: E501
+        :param name: The name of this Pet.
         :type: str
         """
         if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")
         self._name = name
 
     @property
     def status(self):
-        """returns the status of this Pet.  # noqa: E501
-        :return: The status of this Pet.  # noqa: E501
+        """Gets the status of this Pet.
+        :return: The status of this Pet.
         :rtype: enum
         """
         return self._status
@@ -105,14 +104,14 @@ class Pet(BaseObj):
     @status.setter
     def status(self, status):
         """Sets the status of this Pet.
-        :param status: The status of this Pet.  # noqa: E501
+        :param status: The status of this Pet.
         :type: enum
         """
         self._status = status
 
     @property
     def tags(self):
-        """returns the tags of this Pet.
+        """Gets the tags of this Pet.
         :return: The tags of this Pet.
         :rtype: Tag
         """
@@ -125,20 +124,21 @@ class Pet(BaseObj):
         :type: Tag
         """
         self._tags = tags
+
     @property
     def photo_Urls(self):
-        """returns the Photo Urls of this Pet.
+        """Gets the Photo Urls of this Pet.
         :return: The Photo Urls of this Pet.
         :rtype: str
         """
         return self._photo_Urls
 
     @photo_Urls.setter
-    def photo_Urls(self, photoUrls: list[str,str]):
+    def photo_Urls(self, photoUrls: list[str, str]):
         """Sets the photoUrls of this Pet.
         :param photo_Urls: The Photo Urls of this Pet.
         :type: str
         """
         self._photo_Urls = photoUrls
-    def __repr__(self):
-        return f"{self}"
+
+

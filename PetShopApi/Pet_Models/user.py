@@ -1,8 +1,12 @@
 from PetShopApi.Pet_Models.base_obj import BaseObj
 
+
 class User(BaseObj):
 
-    def __init__(self, id: int,userStatus, username: str=None, firstName=None, password: str = None, lastName=None, email=None, phone=None):
+    def __init__(self, id: int, userStatus, username: str = None, firstName=None, password: str = None, lastName=None,
+                 email=None, phone=None):
+        super(BaseObj, self).__init__()
+
         if not str(id).isdigit() and not BaseObj.is_base64(id):
             raise TypeError("user id must be a integer!")
         self._id = id
@@ -71,17 +75,17 @@ class User(BaseObj):
     @username.setter
     def username(self, username):
         """Sets the name of this User.
-        :param user_name: The user_name of this User.  # noqa: E501
+        :param user_name: The user_name of this User.
         :type: str
         """
         if username is None:
-            raise ValueError("Invalid value for `user_name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `user_name`, must not be `None`")
         self._username = username
 
     @property
     def password(self):
-        """Gets the password of this User.  # noqa: E501
-        :return: The password of this User.  # noqa: E501
+        """Gets the password of this User.
+        :return: The password of this User.
         :rtype: str
         """
         return self._password
@@ -89,17 +93,17 @@ class User(BaseObj):
     @password.setter
     def password(self, password):
         """Sets the password of this User.
-        :param password: The password of this User.  # noqa: E501
+        :param password: The password of this User.
         :type: str
         """
         if password is None:
-            raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `password`, must not be `None`")
         self._password = password
 
     @property
     def first_name(self):
-        """Gets the first_name of this User.  # noqa: E501
-        :return: The first_name of this User.  # noqa: E501
+        """Gets the first_name of this User.
+        :return: The first_name of this User.
         :rtype: str
         """
         return self._firstName
@@ -107,17 +111,17 @@ class User(BaseObj):
     @first_name.setter
     def first_name(self, firstName):
         """Sets the first_name of this User.
-        :param first_name: The first_name of this User.  # noqa: E501
+        :param first_name: The first_name of this User.
         :type: str
         """
         if firstName is None:
-            raise ValueError("Invalid value for `first_name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `first_name`, must not be `None`")
         self._user_name = firstName
 
     @property
     def last_name(self):
-        """Gets the last_name of this User.  # noqa: E501
-        :return: The last_name of this User.  # noqa: E501
+        """Gets the last_name of this User.
+        :return: The last_name of this User.
         :rtype: str
         """
         return self._lastName
@@ -125,17 +129,17 @@ class User(BaseObj):
     @last_name.setter
     def last_name(self, lastName):
         """Sets the last_name of this User.
-        :param last_name: The last_name of this User.  # noqa: E501
+        :param last_name: The last_name of this User.
         :type: str
         """
         if lastName is None:
-            raise ValueError("Invalid value for `last_name`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `last_name`, must not be `None`")
         self._lastName = lastName
 
     @property
     def email(self):
-        """Gets the email of this User.  # noqa: E501
-        :return: The email of this User.  # noqa: E501
+        """Gets the email of this User.
+        :return: The email of this User.
         :rtype: str
         """
         return self._email
@@ -143,17 +147,17 @@ class User(BaseObj):
     @email.setter
     def email(self, email):
         """Sets the email of this User.
-        :param email: The email of this User.  # noqa: E501
+        :param email: The email of this User.
         :type: str
         """
         if email is None:
-            raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `email`, must not be `None`")
         self._email = email
 
     @property
     def phone(self):
-        """Gets the phone of this User.  # noqa: E501
-        :return: The phone of this User.  # noqa: E501
+        """Gets the phone of this User.
+        :return: The phone of this User.
         :rtype: str
         """
         return self._phone
@@ -161,28 +165,27 @@ class User(BaseObj):
     @phone.setter
     def phone(self, phone):
         """Sets the phone of this User.
-        :param phone: The phone of this User.  # noqa: E501
+        :param phone: The phone of this User.
         :type: str
         """
         if phone is None:
-            raise ValueError("Invalid value for `phone`, must not be `None`")  # noqa: E501
+            raise ValueError("Invalid value for `phone`, must not be `None`")
         self._phone = phone
 
     @property
     def userStatus(self):
-        """Gets the user_status of this User.  # noqa: E501
-        :return: The user_status of this User.  # noqa: E501
+        """Gets the user_status of this User.
+        :return: The user_status of this User.
         :rtype: str
         """
         return self._userStatus
 
     @userStatus.setter
-    def user_status(self, userStatus):
-        """Sets the user_status of this User.
-        :param user_status: The user_status of this User.  # noqa: E501
+    def userStatus(self, userStatus):
+        """Sets the userStatus of this User.
+        :param userStatus: The user_status of this User.
         :type: str
         """
         if userStatus is None:
             raise ValueError("Invalid value for `user_status`, must not be `None`")  # noqa: E501
         self._userStatus = userStatus
-
