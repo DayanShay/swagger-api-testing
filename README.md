@@ -1,4 +1,4 @@
-# swagger-api-testing
+# swagger-PetStore-api-testing
 Sela repo Project for Api Testing
 
 PetShopApi Project tests APIs on PetStore Swagger
@@ -19,9 +19,13 @@ https://github.com/DayanShay/swagger-api-testing/tree/petshop/PetShopApi/Pet_Mod
 
 How to Run on cmd - by defalt url of the Swagger. make sure to copy the full path to the tests file.
 
-pytest "FullPath"\PetShopApi\PetStoreTests\test_petstpreApi.py
+``` pytest "FullPath"\PetShopApi\PetStoreTests\test_petstpreApi.py ```
 
-How to Run on cmd - On your One Swaager. "YourURL" = Your local Swager pytest --url "YourURL" ."FullPath"\PetShopApi\PetStoreTests\test_petstpreApi.py
+How to Run on cmd - On your One Swaager. 
+
+"YourURL" = Your local Swager 
+
+``` pytest --url "YourURL" ."FullPath"\PetShopApi\PetStoreTests\test_petstpreApi.py ```
 
 Need to have
 
@@ -29,9 +33,9 @@ allure install
 And JAVA_HOME
 To run Allure Report
 
-1.pytest --alluredir=PetStoreReports\ ."FullPath"\PetShopApi\PetStoreTests\test_petstpreApi.py
+1.``` pytest --alluredir=PetStoreReports\ ."FullPath"\PetShopApi\PetStoreTests\test_petstpreApi.py ```
 
-2.allure serve ."FullPath"\PetShopApi\PetStoreReports
+2.``` allure serve ."FullPath"\PetShopApi\PetStoreReports ```
 
 exemple :
 
