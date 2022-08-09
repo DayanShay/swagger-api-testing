@@ -66,7 +66,7 @@ class BookStoreApi:
             return res1.status_code, res1.json()
         return res1.status_code, res1.text
 
-    def get_book(self, isnb):
+    def get_book(self, isbn):
         res1 = self._session.get(url=f"{self._url}?ISBN={isnb}")
         if res1.status_code == 200:
             return res1.status_code, res1.json()
@@ -78,8 +78,8 @@ class BookStoreApi:
             return res1.status_code, res1.json()
         return res1.status_code, res1.text
 
-    def put_books(self, data, isnb):
-        res1 = self._session.put(url=f"{self._url}/{isnb}", data=data)
+    def put_books(self, data, isbn):
+        res1 = self._session.put(url=f"{self._url}/{isbn}", data=data)
         if res1.status_code == 200:
             return res1.status_code, res1.json()
         return res1.status_code, res1.text

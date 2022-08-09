@@ -105,7 +105,7 @@ def test_delete_books(bookStoreApi):
 
 
 def test_get_book(book_fix,bookStoreApi):
-    code, outcome = bookStoreApi.get_book(isnb=book_fix.isbn)
+    code, outcome = bookStoreApi.get_book(isbn=book_fix.isbn)
     book_test = []
     for a in outcome["books"]:
         book_test.append(BookModel(**a))
@@ -120,7 +120,7 @@ def test_delete_book(book_fix,bookStoreApi):
     assert code == 204
 
 def test_put_books(store_user_fix,bookStoreApi):
-    code, outcome = bookStoreApi.put_books(isnb =store_user_fix.isbn,data=store_user_fix.to_json())
+    code, outcome = bookStoreApi.put_books(isbn =store_user_fix.isbn,data=store_user_fix.to_json())
     LOGGER.info(outcome)
     assert code == 200
 
