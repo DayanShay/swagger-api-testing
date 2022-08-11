@@ -5,13 +5,17 @@ At this repo you will find Api testing Using Pytest and Allure report for PetSto
 
 # Branches 
 
-*  selenium Branch
-https://github.com/DayanShay/sel-play-tests/tree/selenium
+*  Petshop Branch
+https://github.com/DayanShay/swagger-api-testing/tree/petshop
+
+*  Bookstore Branch
+https://github.com/DayanShay/swagger-api-testing/tree/bookstore
 
 
-*  playwright Branch
-https://github.com/DayanShay/sel-play-tests/tree/playwright
+# Swaggers Urls:
 
-# WebSite Url:
+*  PetStoreApi Swagger
+https://petstore3.swagger.io/
 
-http://automationpractice.com/index.php
+* BookStoreAPI Swagger
+https://bookstore.toolsqa.com/swagger/
