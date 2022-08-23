@@ -3,31 +3,12 @@ from PetShopApi.Pet_Models.base_obj import BaseObj
 from PetShopApi.Pet_Models.tag import Tag
 from PetShopApi.Pet_Models.category import Category
 
-data = {
-    "id": 10,
-    "name": "doggie",
-    "category": {
-        "id": 1,
-        "name": "Dogs"
-    },
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-        {
-            "id": 0,
-            "name": "string"
-        }
-    ],
-    "status": "available"
-}
-
 
 class Pet(BaseObj):
     def __init__(self, id: int, name: str, category=None, photoUrls: list[str, str] = None, tags: Tag = None,
                  status: petStatus = None) -> object:
         super(BaseObj, self).__init__()
-        if not isinstance(id, int) and not BaseObj.is_base64(id):
+        if not str(id).isdigit():
             raise AttributeError("Id must be id int")
         if not isinstance(name, str):
             raise AttributeError("name must be string")
@@ -35,13 +16,9 @@ class Pet(BaseObj):
         self._name = name
         self._photo_Urls = photoUrls
         self._tags = tags
-        if category is not None:
-            if not isinstance(category, Category) and not isinstance(category, dict):
-                raise TypeError("category must be instance of Category or dict!")
-            if isinstance(category, dict) and isinstance(category, Category):
-                category = Category(**category)
-            self._category = category
         self._category = category
+        if category is not None:
+            self._category = Category(**category)
         if photoUrls is not None:
             if not isinstance(photoUrls, list):
                 raise AttributeError("photoUrls must be a list")
@@ -61,8 +38,8 @@ class Pet(BaseObj):
 
     @property
     def id(self):
-        """Gets the id of this Pet.  # noqa: E501
-        :return: The id of this Pet.  # noqa: E501
+        """Gets the id of this Pet.
+        :return: The id of this Pet.
         :rtype: int
         """
         return self._id
@@ -140,5 +117,3 @@ class Pet(BaseObj):
         :type: str
         """
         self._photo_Urls = photoUrls
-
-

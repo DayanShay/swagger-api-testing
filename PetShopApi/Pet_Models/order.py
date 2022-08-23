@@ -13,9 +13,9 @@ class Order(BaseObj):
 
     def __init__(self, id: int, petId: int, quantity=None, shipDate=None, status=None, complete=False):
         super(BaseObj, self).__init__()
-        if not str(id).isdigit() and not BaseObj.is_base64(id):
+        if not str(id).isdigit():
             raise TypeError("order id must be a integer!")
-        if not str(petId).isdigit() and not BaseObj.is_base64(id):
+        if not str(petId).isdigit():
             raise TypeError("order pet_id must be a integer!")
 
         self._id = id
@@ -25,7 +25,7 @@ class Order(BaseObj):
         self._status = status
         self._complete = complete
         if quantity is not None:
-            if not str(quantity).isdigit() and not BaseObj.is_base64(id):
+            if not str(quantity).isdigit():
                 raise TypeError("order quantity must be a integer!")
             self._quantity = quantity
         if shipDate is not None:

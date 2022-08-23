@@ -2,28 +2,18 @@ from PetShopApi.Pet_Models.base_obj import BaseObj
 
 
 class Tag(BaseObj):
-    def __init__(self, id: int = None, name: str = None) -> object:
-        '''
-        Constructor
-        '''
+    def __init__(self, id: int, name: str):
+        if not isinstance(id, int):
+            raise TypeError("id not integer")
+        if not isinstance(name, str):
+            raise TypeError("name not string")
         self._id = id
         self._name = name
-        if id is not None:
-            if not isinstance(id, int) or not str(id).isdigit():
-                raise AttributeError("Id must be id int64 base")
-            self._id = id
-        if name is not None:
-            if not isinstance(name, str):
-                raise AttributeError("name must be string")
-            self._name = name
+
+    @property
+    def id(self):
+        return self._id
 
     @property
     def name(self):
-        """Gets the name of this tag.
-        :return: The name of this tag.
-        :rtype: int
-        """
         return self._name
-
-    def __repr__(self):
-        return f"{self}".replace('"', "'")

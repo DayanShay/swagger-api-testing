@@ -7,7 +7,7 @@ class User(BaseObj):
                  email=None, phone=None):
         super(BaseObj, self).__init__()
 
-        if not str(id).isdigit() and not BaseObj.is_base64(id):
+        if not str(id).isdigit():
             raise TypeError("user id must be a integer!")
         self._id = id
         if not isinstance(username, str):
@@ -44,7 +44,7 @@ class User(BaseObj):
             self._phone = phone
 
         if userStatus is not None:
-            if not str(userStatus).isdigit() and not BaseObj.is_base32(userStatus):
+            if not str(userStatus).isdigit():
                 raise TypeError("user status name must be a integer")
             self._userStatus = userStatus
 
