@@ -12,9 +12,7 @@ class AddListOfBooks(BaseObj):
             self._userId = userId
 
         if collectionOfIsbns is not None:
-            if not isinstance(collectionOfIsbns, list):
-                raise TypeError("collectionOfIsbns must be list")
+            isbn_list = []
             for isnb in collectionOfIsbns:
-                if not isinstance(isnb, CollectionOfIsbn):
-                    raise TypeError("one or more values inside collectionOfIsbns is not instance of CollectionOfIsbn!")
-            self._collectionOfIsbns = collectionOfIsbns
+                isbn_list.append(isnb)
+            self._collectionOfIsbns = isbn_list

@@ -2,9 +2,12 @@ from BookStoreApi.Book_Models.baseObj import BaseObj
 
 
 class UserResult(BaseObj):
-    def __init__(self, userId: str, username: str, books: [str]):
+    def __init__(self, username: str, books: [str],userID = None, userId= None):
         super(BaseObj, self).__init__()
-        self._userId = userId
+        if userID and not userId:
+            self._userId = userID
+        else:
+            self._userId = userId
         self._username = username
         self._books = books
 

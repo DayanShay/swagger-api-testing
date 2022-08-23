@@ -13,7 +13,7 @@ class ReplaceIsbn(BaseObj):
             self._userId = userId
 
         if isbn is not None:
-            if not isinstance(isbn, str):
+            if not str(isbn).isdigit():
                 raise TypeError("isbn must be string")
             self._isbn = isbn
 

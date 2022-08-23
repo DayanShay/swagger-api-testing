@@ -17,6 +17,3 @@ class BaseObj:
 
     def __str__(self):
         return json.dumps(self.to_json())
-
-    def __repr__(self):
-        return f"{self}"
