@@ -52,7 +52,7 @@ class AccountApi:
             return res1.status_code, UserResult(**res1.json())
         return res1.status_code, res1.text
 
-    def delete_user(self, userId: str) -> tuple[int, str ]:
+    def delete_user(self, userId: str) -> tuple[int, str]:
         """
         this fun gets userid and send delete req to swagger
         :param userId: str: the userid id you want to delete
@@ -88,7 +88,7 @@ class Book_Store_Api:
         self._session = session
         self._session.headers.update(self._headers)
 
-    def get_books(self) -> tuple[int, str]:
+    def get_books(self) -> [BookModel]:
         """
         this fun use a get req to swagger and ask to get all books
         :return: tuple[int, str | json] status_code and the outcome(text or json) of the response
@@ -101,7 +101,7 @@ class Book_Store_Api:
             return res1.status_code, books_list
         return res1.status_code, res1.text
 
-    def post_books(self, data) -> tuple[int, str ]:
+    def post_books(self, data) -> ReplaceIsbn:
         """
         this fun get book as json and sent a post req to swagger
         :param data: json : Book to Post
@@ -112,7 +112,7 @@ class Book_Store_Api:
             return res1.status_code, ReplaceIsbn(**res1.json())
         return res1.status_code, res1.text
 
-    def delete_books(self, userId) -> tuple[int, str ]:
+    def delete_books(self, userId) -> tuple[int, str]:
         """
         this fun get userid  as json and sent delete req  of all books to swagger
         :param userId: json: the user
