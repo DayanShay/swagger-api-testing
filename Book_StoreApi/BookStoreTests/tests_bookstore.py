@@ -52,7 +52,7 @@ def user_fix():
 
 @pytest.fixture(scope="module")
 def get_data_from_json():
-    with open("data.json", "r") as f:
+    with open(r"Book_StoreApi\BookStoreTests\data.json", "r") as f:
         res_json_data = UserResult(**json.load(f))
     return res_json_data
 
