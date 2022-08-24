@@ -52,7 +52,7 @@ def user_fix():
 
 @pytest.fixture(scope="module")
 def get_data_from_json():
-    with open(r"Book_StoreApi\BookStoreTests\data.json", "r") as f:
+    with open("Book_StoreApi/BookStoreTests/data.json", "r") as f:
         res_json_data = UserResult(**json.load(f))
     return res_json_data
 
@@ -63,7 +63,7 @@ def post_account(user_fix, accountApi):
     LOGGER.info(outcome)
     if code == 201 and outcome.username == user_fix["userName"]:
         res_json = json.dumps(outcome.to_json(), indent=3)
-        with open("data.json", "w") as f:
+        with open("Book_StoreApi/BookStoreTests/data.json", "w") as f:
             f.write(res_json)
         return outcome
 
