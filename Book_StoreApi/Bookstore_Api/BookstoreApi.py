@@ -1,8 +1,8 @@
 import json
 import requests
-from BookStoreApi.Book_Models.getUserResult import UserResult
-from BookStoreApi.Book_Models.bookModal import BookModel
-from BookStoreApi.Book_Models.replace_isbn import ReplaceIsbn
+from Book_StoreApi.Book_Models.getUserResult import UserResult
+from Book_StoreApi.Book_Models.bookModal import BookModel
+from Book_StoreApi.Book_Models.replace_isbn import ReplaceIsbn
 
 
 class AccountApi:

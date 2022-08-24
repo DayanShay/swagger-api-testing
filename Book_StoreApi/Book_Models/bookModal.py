@@ -1,4 +1,4 @@
-from BookStoreApi.Book_Models.baseObj import BaseObj
+from Book_StoreApi.Book_Models.baseObj import BaseObj
 
 
 class BookModel(BaseObj):
@@ -25,7 +25,7 @@ class BookModel(BaseObj):
         if not isinstance(publisher, str) and publisher is not None:
             raise TypeError("publisher not string")
         self._publisher = publisher
-        if not isinstance(pages, int) and pages is not 0:
+        if not isinstance(pages, int) and pages != 0:
             raise TypeError("pages not int")
         self._pages = pages
         if not isinstance(description, str) and description is not None:

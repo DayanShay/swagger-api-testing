@@ -1,4 +1,4 @@
-from BookStoreApi.Book_Models.baseObj import BaseObj
+from Book_StoreApi.Book_Models.baseObj import BaseObj
 
 
 class ReplaceIsbn(BaseObj):

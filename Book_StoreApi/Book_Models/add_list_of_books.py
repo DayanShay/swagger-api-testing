@@ -1,5 +1,5 @@
-from BookStoreApi.Book_Models.baseObj import BaseObj
-from BookStoreApi.Book_Models.collection_of_isbn import CollectionOfIsbn
+from Book_StoreApi.Book_Models.baseObj import BaseObj
+from Book_StoreApi.Book_Models.collection_of_isbn import CollectionOfIsbn
 
 
 class AddListOfBooks(BaseObj):
