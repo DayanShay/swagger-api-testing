@@ -16,6 +16,14 @@ https://github.com/DayanShay/swagger-api-testing/tree/petshop/PetShopApi/PetStor
 
 https://github.com/DayanShay/swagger-api-testing/tree/petshop/PetShopApi/Pet_Models
 
+Install requirements
+
+"FullPath" < - insert full path to requirements.txt file.
+
+```commandline
+pip install -r .\PetShopApi\requirements.txt 
+```
+
 How to Run on cmd - by defalt url of the Swagger. make sure to copy the full path to the tests file.
 
 ``` pytest "FullPath"\PetShopApi\PetStoreTests\test_petstpreApi.py ```
