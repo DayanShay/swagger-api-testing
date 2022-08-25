@@ -6,15 +6,15 @@ At BookStoreApi folder  you will find:
 
 1.BookStoreTests - contain the pytest script testing for the api
 
-https://github.com/DayanShay/swagger-api-testing/tree/bookstore/BookStoreApi/BookStoreTests
+https://github.com/DayanShay/swagger-api-testing/tree/bookstore/Book_StoreApi/BookStoreTests
 
 2.BookStore_Api - contain the python api for the swagger
 
-https://github.com/DayanShay/swagger-api-testing/tree/bookstore/BookStoreApi/BookStore_Api
+https://github.com/DayanShay/swagger-api-testing/tree/bookstore/Book_StoreApi/BookStore_Api
 
 3.Book_Models - contain the python moduls for the tests
 
-https://github.com/DayanShay/swagger-api-testing/tree/bookstore/BookStoreApi/Book_Models
+https://github.com/DayanShay/swagger-api-testing/tree/bookstore/Book_StoreApi/Book_Models
 
 
 How to Run on cmd - by defalt url of the Swagger.
