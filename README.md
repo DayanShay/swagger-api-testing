@@ -16,6 +16,13 @@ https://github.com/DayanShay/swagger-api-testing/tree/bookstore/Book_StoreApi/Bo
 
 https://github.com/DayanShay/swagger-api-testing/tree/bookstore/Book_StoreApi/Book_Models
 
+Install requirements
+
+"FullPath" < - insert full path to requirements.txt file.
+
+```commandline
+pip install -r .\Book_StoreApi\requirements.txt 
+```
 
 How to Run on cmd - by defalt url of the Swagger.
 make sure to copy the full path to the tests file.
