@@ -4,7 +4,7 @@ BookStoreApi Project tests APIs on BookStore Swagger
 
 At BookStoreApi folder  you will find:
 
-1.BookStoreTests - contain the pytest sqript testing for the api
+1.BookStoreTests - contain the pytest script testing for the api
 
 https://github.com/DayanShay/swagger-api-testing/tree/bookstore/BookStoreApi/BookStoreTests
 
@@ -20,13 +20,13 @@ https://github.com/DayanShay/swagger-api-testing/tree/bookstore/BookStoreApi/Boo
 How to Run on cmd - by defalt url of the Swagger.
 make sure to copy the full path to the tests file.
 
-``` pytest "FullPath"\BookStoreApi\BookStoreTests\tests_bookstore.py ```
+``` pytest "FullPath"\Book_StoreApi\BookStoreTests\tests_bookstore.py ```
 
 How to Run on cmd - On your own Swaager.
 
 "YourURL" = Your local Swager 
 
-``` pytest --url "YourURL" .\"FullPath"\BookStoreApi\BookStoreTests\tests_bookstore.py ```
+``` pytest --url "YourURL" .\"FullPath"\Book_StoreApi\BookStoreTests\tests_bookstore.py ```
 
 Need to have
 1. allure install
@@ -34,10 +34,10 @@ Need to have
 
 To run Allure Report 
 
-1.``` pytest --alluredir=BookStoreReports\ .\"FullPath"\BookStoreApi\BookStoreTests\tests_bookstore.py ```
+1.``` pytest --alluredir=BookStoreReports\ .\"FullPath"\Book_StoreApi\BookStoreTests\tests_bookstore.py ```
 
 
-2.``` allure serve .\"FullPath"\BookStoreApi\BookStoreReports ```
+2.``` allure serve .\"FullPath"\Book_StoreApi\BookStoreReports ```
 
 exemple :
 
