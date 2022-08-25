@@ -147,13 +147,14 @@ def order_fix():
 
 
 def test_get_inventory(order_fix: Order, store_Api):
-    res1 = store_Api.get_inventory()
-    LOGGER.info(res1.text)
-    assert res1.status_code == 200
+    res1_code, res1_order = store_Api.get_inventory()
+    LOGGER.info(res1_order)
+    assert res1_code == 200
     order = order_fix
-    res2 = store_Api.post_order(order.to_json())
-    res3 = store_Api.get_inventory()
-    assert res2.status_code == 200 and res3.json()["approved"] == res1.json()["approved"]+1
+    res2_code, res2_order = store_Api.post_order(order.to_json())
+    assert res2_code == 200 and order_fix.id == res2_order.id
+    res3_code, res3_order = store_Api.get_inventory()
+    assert res3_code == 200 and res3_order["approved"] != res1_order["approved"]
 
 
 def test_post_order(order_fix: Order, store_Api):

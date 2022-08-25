@@ -85,7 +85,9 @@ class StoreApi:
 
     def get_inventory(self) -> requests:
         res = self._session.get(url=f"{self._url}inventory", headers=self._headers)
-        return res
+        if res.ok:
+            return res.status_code, res.json()
+        return res.status_code, res.text
 
     def post_order(self, data: json) -> Order:
         res = self._session.post(url=f"{self._url}order", json=data, headers=self._headers)
