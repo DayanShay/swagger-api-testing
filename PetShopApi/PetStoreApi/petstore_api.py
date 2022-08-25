@@ -28,7 +28,7 @@ class PetApi:
         else:
             return res.status_code, res.text
 
-    def findByStatus(self, status: json):
+    def findByStatus(self, status: str) -> [Pet]:
         res = self._session.get(url=f"{self._url}/findByStatus?status={status}", headers=self._headers)
         if res.status_code == 200:
             pet_list = []

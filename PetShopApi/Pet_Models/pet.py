@@ -23,7 +23,7 @@ class Pet(BaseObj):
             if not isinstance(photoUrls, list):
                 raise AttributeError("photoUrls must be a list")
             for item in photoUrls:
-                if not isinstance(item, str):
+                if not isinstance(item, str) and item:
                     raise AttributeError("photoUrls must be strings")
             self.photo_urls = photoUrls
         self._tags = tags
