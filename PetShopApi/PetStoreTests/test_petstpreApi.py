@@ -90,10 +90,10 @@ def test_find_by_status(test_status, Pet_fix, pet_Api):
 def test_find_by_tag(Pet_fix, pet_Api):
     res_status, res_put_pet = pet_Api.post_pet(Pet_fix.to_json())
     assert res_status == 200 and res_put_pet.id == Pet_fix.id
-    res_get_tags, res_list_pet = pet_Api.findByTags("tag1")
+    res_get_tags, res_list_pet = pet_Api.findByTags(Pet_fix.tags)
     assert res_get_tags == 200
     for tags in res_list_pet:
-        assert Pet_fix.tags[0] == tags.tags[0]
+        assert Pet_fix.tags in tags.tags
 
 
 def test_get_pet_by_id(Pet_fix, pet_Api):
